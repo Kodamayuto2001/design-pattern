@@ -27,19 +27,11 @@ public class FileProperties implements FileIO {
 
 	@Override
 	public void setValue(String key, String value) {
-		if (p == null) {
-			return;
-		}
-
 		p.setProperty(key, value);
 	}
 
 	@Override
 	public String getValue(String key) {
-		if (p == null) {
-			return "";
-		}
-
 		return p.getProperty(key);
 	}
 
