@@ -42,6 +42,9 @@ public class Main {
 		page.add(traynews);
 		page.add(traysearch);
 		page.output();
+
+		Page yahooPage = factory.createYahooPage();
+		yahooPage.output();
 	}
 
 }

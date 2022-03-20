@@ -35,5 +35,13 @@ public abstract class Factory {
 	public abstract Link createLink(String caption, String url);
 	public abstract Tray createTray(String caption);
 	public abstract Page createPage(String title, String author);
+	public final Page createYahooPage() {
+		Link us_yahoo = createLink("Yahoo!", "http://www.yahoo.com/");
+		Tray trayyahoo = createTray("Yahoo!");
+		trayyahoo.add(us_yahoo);
+		Page page = createPage("YahooPage", "Piyo Piyo");
+		page.add(trayyahoo);
+		return page;
+	}
 
 }
