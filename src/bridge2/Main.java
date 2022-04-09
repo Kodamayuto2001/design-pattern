@@ -1,7 +1,7 @@
 package bridge2;
 
-import bridge.implementation.StringDisplayImpl;
 import bridge2.function.RandomDisplay;
+import bridge2.implementation.StringDisplayImpl;
 
 public class Main {
 

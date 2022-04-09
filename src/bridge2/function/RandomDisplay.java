@@ -2,7 +2,7 @@ package bridge2.function;
 
 import java.util.Random;
 
-import bridge.implementation.DisplayImpl;
+import bridge2.implementation.DisplayImpl;
 
 public class RandomDisplay extends Display {
 

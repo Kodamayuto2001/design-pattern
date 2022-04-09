@@ -1,6 +1,6 @@
 package bridge2.function;
 
-import bridge.implementation.DisplayImpl;
+import bridge2.implementation.DisplayImpl;
 
 public class Display {
 
