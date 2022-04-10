@@ -47,8 +47,12 @@ public class ProbStrategy implements Strategy {
 
 	@Override
 	public void study(boolean win) {
-		// TODO 自動生成されたメソッド・スタブ
-
+		if (win) {
+			history[prevHandValue][currentHandValue]++;
+		} else {
+			history[prevHandValue][(currentHandValue + 1) % 3]++;
+			history[prevHandValue][(currentHandValue + 2) % 3]++;
+		}
 	}
 
 }
