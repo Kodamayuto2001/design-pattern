@@ -4,7 +4,7 @@ public class SideBorder extends Border {
 
 	private char borderChar;
 
-	protected SideBorder(Display display, char ch) {
+	public SideBorder(Display display, char ch) {
 		super(display);
 		this.borderChar = ch;
 	}

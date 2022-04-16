@@ -1,14 +1,20 @@
-package decorator;
+package decorator2;
 
-public class FullBorder extends Border {
+import decorator.Border;
+import decorator.Display;
 
-	public FullBorder(Display display) {
+public class UpDownBorder extends Border {
+
+	private char borderChar;
+
+	protected UpDownBorder(Display display, char ch) {
 		super(display);
+		this.borderChar = ch;
 	}
 
 	@Override
 	public int getColumns() {
-		return 1 + display.getColumns() + 1;
+		return display.getColumns();
 	}
 
 	@Override
@@ -19,11 +25,11 @@ public class FullBorder extends Border {
 	@Override
 	public String getRowText(int row) {
 		if (row == 0) {
-			return "+" + makeLine('-', display.getColumns()) + "+";
+			return makeLine(borderChar, display.getColumns());
 		} else if (row == display.getRows() + 1) {
-			return "+" + makeLine('-', display.getColumns()) + "+";
+			return makeLine(borderChar, display.getColumns());
 		} else {
-			return "|" + display.getRowText(row - 1) + "|";
+			return display.getRowText(row - 1);
 		}
 	}
 
@@ -34,4 +40,5 @@ public class FullBorder extends Border {
 		}
 		return buf.toString();
 	}
+
 }
